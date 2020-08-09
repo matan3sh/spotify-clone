@@ -1,0 +1,16 @@
+// Setup
+@import 'setup/variables';
+
+// Basics
+@import 'basic/base';
+
+// Components
+@import 'components/modal/login';
+@import 'components/main/player';
+@import 'components/main/sidebar';
+@import 'components/main/sidebarOption';
+@import 'components/main/body';
+@import 'components/main/bodyHeader';
+@import 'components/main/bodyInfo';
+@import 'components/main/bodySongs';
+@import 'components/main/footer';

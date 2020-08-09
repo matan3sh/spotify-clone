@@ -1,0 +1,24 @@
+.bodyInfo {
+  display: flex;
+  padding: 10px;
+}
+
+.bodyInfo > img {
+  height: 20vw;
+  margin: 0 20px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.bodyInfo__text {
+  flex: 1;
+  margin-top: 2rem;
+}
+
+.bodyInfo__text > h2 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.bodyInfo__text > p {
+  font-size: 14px;
+}
