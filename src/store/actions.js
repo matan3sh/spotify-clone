@@ -57,3 +57,50 @@ export const getUserPlaylist = (id) => async (dispatch) => {
     console.log(err);
   }
 };
+
+export const setPlaying = (id) => async (dispatch) => {
+  try {
+    spotify
+      .play({
+        uris: [`spotify:track:${id}`],
+      })
+      .then((res) => {
+        spotify.getMyCurrentPlayingTrack().then((r) => {
+          dispatch({
+            type: 'SET_ITEM',
+            payload: r.item,
+          });
+          dispatch({
+            type: 'SET_PLAYING',
+            payload: true,
+          });
+        });
+      });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const setPlayPlaylist = (id) => async (dispatch) => {
+  console.log(id);
+  try {
+    spotify
+      .play({
+        context_uri: `spotify:playlist:${id}`,
+      })
+      .then((res) => {
+        spotify.getMyCurrentPlayingTrack().then((r) => {
+          dispatch({
+            type: 'SET_ITEM',
+            payload: r.item,
+          });
+          dispatch({
+            type: 'SET_PLAYING',
+            payload: true,
+          });
+        });
+      });
+  } catch (err) {
+    console.log(err);
+  }
+};

@@ -6,7 +6,7 @@
   height: 65px;
   width: 100%;
   background-color: #282828;
-  padding: 40px;
+  padding: 20px;
 }
 
 .footer__left {
@@ -31,7 +31,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 600px;
+  max-width: 300px;
 }
 
 .footer__right {
@@ -40,7 +40,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 600px;
+  max-width: 300px;
+  margin-right: 100px;
 }
 
 .footer__green {

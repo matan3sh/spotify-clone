@@ -3,6 +3,8 @@ const initialState = {
   user: null,
   playlists: [],
   playlis: null,
+  item: null,
+  playing: null,
 };
 
 export default function reducer(state = initialState, action) {
@@ -24,6 +26,16 @@ export default function reducer(state = initialState, action) {
       return {
         ...state,
         playlist: action.payload,
+      };
+    case 'SET_ITEM':
+      return {
+        ...state,
+        item: action.payload,
+      };
+    case 'SET_PLAYING':
+      return {
+        ...state,
+        playing: action.payload,
       };
     default:
       return state;
